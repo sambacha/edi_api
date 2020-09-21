@@ -97,9 +97,11 @@ paths:
           description: Interchange control not found
         "200":
           description: Interchange control retrieved
-          content:
+          content: 
+              # REGEX FOR EDIFACT INTERHCANGE: "(^.*?)~\\1$"
+              # source: https://gist.github.com/sambacha/2a00dcce3543f3a1e897816c063bb12a
             application/json:
-              schema:
+              schema: 
                 $ref: "#/components/schemas/InterchangeControl"
     put:
       tags:

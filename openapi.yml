@@ -116,7 +116,7 @@ paths:
           schema:
             type: string
       requestBody:
-        description: ""
+        description: "The Control Identifier assigned"
         content:
           application/json:
             schema:

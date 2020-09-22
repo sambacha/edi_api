@@ -1,0 +1,16 @@
+---
+EDI:
+  Type: 
+  Default: 
+    segments: ['.edi']
+          rules:
+          -Data Element
+          pattern: '(\\*)([\\w+\\(\\)' & \"! ,\\-\\./;\\?=%@\\[\\]_\\{\\}\\\\|<#$]*)' -
+          Repetition Segment
+          pattern: '(\\^)([\\w+\\(\\)' & \"! ,\\-\\./;\\?=%@\\[\\]_\\{\\}\\\\|<#$]*)' -
+          Component Segment
+          pattern: '([:>])([\\w+\\(\\)' & \"! ,\\-\\./;\\?=%@\\[\\]_\\{\\}\\\\|<#$]*)' -
+        - Keyword Operator:
+          pattern: '\\~'
+          Storage Type
+          pattern: '[\\w\\d]{2,3}'
